@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charity List</title>
+</head>
+<body>
+<section>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mission</th>
+            <th>Donations Received</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="charity : ${charities}">
+            <td th:text="${charity.name}"></td>
+            <td th:text="${charity.description}"></td>
+            <td th:text="${charity.donation_total}"></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>
